@@ -11,5 +11,12 @@ RSpec.feature "Creating Properties" do
     click_button "Create Property"
 
     expect(page).to have_content("Property has been created.")
+
+    property = Property.find_by(name: "Sublime Text 3")
+
+    expect(page.current_url).to eql(property_url(property))
+
+    title = "Sublime Text 3 - Properties - W Prins Properties"
+    expect(page).to have_title(title)
   end
 end
