@@ -13,7 +13,8 @@ class PropertiesController < ApplicationController
       flash[:notice] = "Property has been created."
       redirect_to @property
     else
-      #nothing, yet
+      flash.now[:alert] = "Property has not been created."
+      render "new"
     end
   end
 
