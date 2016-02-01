@@ -23,6 +23,22 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
   end
 
+  def edit
+    @property = Property.find(params[:id])
+  end
+
+  def update
+    @property = Property.find(params[:id])
+
+    if @property.update(property_params)
+      flash[:notice] = "Property has been updated."
+      redirect_to @property
+    else
+      flash.now[:alert] = "Property has not been updated."
+      render "edit"
+    end
+  end
+
   private
 
   def property_params

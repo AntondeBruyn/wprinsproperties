@@ -1,3 +1,4 @@
 <% title(@property.name, "Properties") %>
 <h1><%= @property.name %></h1>
 <p><%= @property.description %></p>
+<%= link_to "Edit Property", edit_property_path(@property) %>
