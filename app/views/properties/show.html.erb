@@ -2,3 +2,9 @@
 <h1><%= @property.name %></h1>
 <p><%= @property.description %></p>
 <%= link_to "Edit Property", edit_property_path(@property) %>
+<%= link_to "Delete Property",
+     property_path(@property),
+     method: :delete,
+     data: { confirm:
+               "Are you sure you want to delete this property?"
+           } %>

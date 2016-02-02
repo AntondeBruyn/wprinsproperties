@@ -39,6 +39,15 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def destroy
+    @property = Property.find(params[:id])
+    @property.destroy
+
+    flash[:notice] = "Property has been deleted."
+
+    redirect_to properties_path
+  end
+
   private
 
   def property_params
