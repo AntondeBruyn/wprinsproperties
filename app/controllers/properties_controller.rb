@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+  before_action :set_property, only: [:show, :edit, :update, :destroy]
+
   def index
     @properties = Property.all
   end
@@ -49,6 +51,15 @@ class PropertiesController < ApplicationController
   end
 
   private
+
+  def set_property
+    @property = Property.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The property you were looking" +
+                      " for could not be found."
+
+      redirect_to properties_path
+  end
 
   def property_params
     params.require(:property).permit(:name, :description)
