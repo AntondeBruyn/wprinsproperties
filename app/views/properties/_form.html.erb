@@ -1,25 +1,6 @@
-<%= form_for(property) do |f| %>
-<% if property.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(property.errors.count, "error") %>
-    prohibited this property from being saved:</h2>
+<%= simple_form_for(property) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
 
-    <ul>
-      <% property.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </p>
-
-  <%= f.submit %>
+  <%= f.button :submit, class: "btn-primary" %>
 <% end %>

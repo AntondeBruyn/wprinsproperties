@@ -18,7 +18,7 @@ RSpec.feature "Creating Properties" do
     expect(page.current_url).to eql(property_url(property))
 
     title = "Sublime Text 3 - Properties - W Prins Properties"
-    expect(page).to have_title(title)
+    expect(page).to have_title("W Prins Properties")
   end
 
   scenario "A user cannot create a property without a name" do

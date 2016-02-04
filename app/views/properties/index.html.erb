@@ -1,6 +1,10 @@
-<h1>Properties</h1>
+<div class="page-header">
+  <h1>Properties</h1>
 
-<%= link_to "New Property", new_property_path, class: "new" %>
+  <ul class="actions">
+    <%= link_to " New Property", new_property_path, class: "new" %>
+  </ul>
+</div>
 
 <div id="properties">
   <% @properties.each do |property| %>
