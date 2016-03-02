@@ -1,6 +1,8 @@
 <%= simple_form_for(property) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :location %>
 
   <%= f.button :submit, class: "btn-primary" %>
 <% end %>

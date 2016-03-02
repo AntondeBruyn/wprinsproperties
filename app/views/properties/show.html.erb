@@ -1,5 +1,10 @@
 <div class="page-header">
   <h1><%= @property.name %></h1>
+    Description: <%= @property.description %>
+    <br>
+    Price: <%= @property.price %>
+    <br>
+    Location: <%= @property.location %>
 
   <ul class="actions">
     <%= link_to "Edit Property",
@@ -15,3 +20,14 @@
         class: "delete" %>
   </ul>
 </div>
+
+  <div class="page-header">
+    <h2>Galleries</h2>
+
+    <ul class="actions">
+      <li><%= link_to "New Gallery",
+        new_property_gallery_path(@property),
+        class: "new" %>
+      </li>
+    </ul>
+  </div>
