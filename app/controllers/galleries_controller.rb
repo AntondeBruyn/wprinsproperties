@@ -31,6 +31,13 @@ class GalleriesController < ApplicationController
     end
   end
 
+  def destroy
+    @gallery.destroy
+    flash[:notice] = "Gallery has been deleted."
+
+    redirect_to @property
+  end
+
 private
 
   def set_property
