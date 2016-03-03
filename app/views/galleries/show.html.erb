@@ -5,6 +5,11 @@
 
   <div class="page-header">
     <h2><%= @gallery.name %></h2>
+
+    <ul class="actions">
+      <li><%= link_to "Edit Gallery", [:edit, @property, @gallery],
+        class: "edit" %></li>
+    </ul>
   </div>
 
   <%= simple_format(@gallery.name) %>

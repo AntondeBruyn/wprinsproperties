@@ -18,6 +18,19 @@ class GalleriesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @gallery.update(gallery_params)
+      flash[:notice] = "Gallery has been updated."
+      redirect_to [@property, @gallery]
+    else
+      flash.now[:alert] = "Gallery has not been updated."
+      render "edit"
+    end
+  end
+
 private
 
   def set_property

@@ -33,11 +33,10 @@
   </div>
 
   <ul id="galleries">
-  <% @property.galleries.each do |gallery| %>
-  <li>
-  #<%= gallery.id %> -
-  <%= link_to gallery.name, [@property, gallery] %>
-  </li>
-  <% end %>
+    <% @property.galleries.each do |gallery| %>
+      <li>
+        #<%= gallery.id %> -
+        <%= link_to gallery.name, [@property, gallery] %>
+      </li>
+    <% end %>
   </ul>
-  
