@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-rails', '~> 4.2'
 gem 'simple_form', '3.1.0'
+gem 'carrierwave'
+gem 'rmagick'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,0 +1,13 @@
+<%= simple_form_for @photo, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+  <%=f.hidden_field :gallery_id %>
+  <p>
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :image, "Choose Image" %>
+    <%= f.file_field :image %>
+  </p>
+  <p><%= f.submit "Add" %></p>
+<% end %>
